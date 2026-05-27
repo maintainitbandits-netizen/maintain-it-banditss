@@ -13,7 +13,7 @@ export default function Contact() {
     setSubmitting(true);
     setError('');
 
-    if (!FORMSPREE_FORM_ID || FORMSPREE_FORM_ID === 'YOUR_FORMSPREE_ID_HERE') {
+    if (!FORMSPREE_FORM_ID || FORMSPREE_FORM_ID.includes('YOUR_FORMSPREE')) {
       setError('Form submission is not configured yet. Please call us at (512) 518-1558 or email info@maintainitbandits.com for your free estimate!');
       setSubmitting(false);
       return;
