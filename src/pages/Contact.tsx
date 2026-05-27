@@ -13,7 +13,6 @@ export default function Contact() {
     setSubmitting(true);
     setError('');
 
-    // If Formspree ID is not configured, show a helpful message
     if (!FORMSPREE_FORM_ID || FORMSPREE_FORM_ID === 'YOUR_FORMSPREE_ID_HERE') {
       setError('Form submission is not configured yet. Please call us at (512) 518-1558 or email info@maintainitbandits.com for your free estimate!');
       setSubmitting(false);
@@ -55,12 +54,12 @@ export default function Contact() {
       {/* Hero */}
       <section className="relative min-h-[40vh] flex items-center pt-20 bg-black">
         <div className="absolute inset-0 opacity-20">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(107,143,113,0.3),transparent_50%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(212,168,67,0.2),transparent_50%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(57,255,20,0.15),transparent_50%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(124,252,0,0.1),transparent_50%)]" />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 bg-lime/20 border border-lime/30 rounded-full px-4 py-1.5 mb-6">
+            <div className="inline-flex items-center gap-2 bg-lime/10 border border-lime/30 rounded-full px-4 py-1.5 mb-6">
               <span className="w-2 h-2 bg-lime rounded-full" />
               <span className="text-lime text-xs font-semibold tracking-wider uppercase">Free Estimate</span>
             </div>
@@ -68,7 +67,7 @@ export default function Contact() {
               Get Your Free
               <span className="text-lime block">Estimate Today</span>
             </h1>
-            <p className="text-white/70 text-lg leading-relaxed">
+            <p className="text-white/50 text-lg leading-relaxed">
               Ready to transform your Austin TX property? Contact Maintain It Bandits LLC for a free, no-obligation estimate on any of our lawn care, landscaping, or cleaning services.
             </p>
           </div>
@@ -88,7 +87,7 @@ export default function Contact() {
                     <h2 className="font-heading text-3xl text-black font-bold mb-4">
                       Thank You!
                     </h2>
-                    <p className="text-charcoal/60 text-lg">
+                    <p className="text-charcoal/50 text-lg">
                       We have received your request and will contact you within 24 hours with your free estimate. Welcome to the Maintain It Bandits LLC family!
                     </p>
                   </div>
@@ -97,7 +96,7 @@ export default function Contact() {
                     <h2 className="font-heading text-2xl md:text-3xl text-black font-bold mb-2">
                       Request Your Free Estimate
                     </h2>
-                    <p className="text-charcoal/60 mb-8">
+                    <p className="text-charcoal/50 mb-8">
                       Fill out the form below and we will get back to you within 24 hours with a custom quote for your Austin TX property.
                     </p>
 
@@ -111,7 +110,7 @@ export default function Contact() {
                     <form onSubmit={handleSubmit} className="space-y-6">
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
-                          <label htmlFor="firstName" className="block text-sm font-medium text-charcoal/70 mb-2">First Name *</label>
+                          <label htmlFor="firstName" className="block text-sm font-medium text-charcoal/60 mb-2">First Name *</label>
                           <input
                             type="text"
                             id="firstName"
@@ -122,7 +121,7 @@ export default function Contact() {
                           />
                         </div>
                         <div>
-                          <label htmlFor="lastName" className="block text-sm font-medium text-charcoal/70 mb-2">Last Name *</label>
+                          <label htmlFor="lastName" className="block text-sm font-medium text-charcoal/60 mb-2">Last Name *</label>
                           <input
                             type="text"
                             id="lastName"
@@ -135,7 +134,7 @@ export default function Contact() {
                       </div>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
-                          <label htmlFor="email" className="block text-sm font-medium text-charcoal/70 mb-2">Email *</label>
+                          <label htmlFor="email" className="block text-sm font-medium text-charcoal/60 mb-2">Email *</label>
                           <input
                             type="email"
                             id="email"
@@ -146,7 +145,7 @@ export default function Contact() {
                           />
                         </div>
                         <div>
-                          <label htmlFor="phone" className="block text-sm font-medium text-charcoal/70 mb-2">Phone *</label>
+                          <label htmlFor="phone" className="block text-sm font-medium text-charcoal/60 mb-2">Phone *</label>
                           <input
                             type="tel"
                             id="phone"
@@ -158,7 +157,7 @@ export default function Contact() {
                         </div>
                       </div>
                       <div>
-                        <label htmlFor="address" className="block text-sm font-medium text-charcoal/70 mb-2">Property Address *</label>
+                        <label htmlFor="address" className="block text-sm font-medium text-charcoal/60 mb-2">Property Address *</label>
                         <input
                           type="text"
                           id="address"
@@ -169,7 +168,7 @@ export default function Contact() {
                         />
                       </div>
                       <div>
-                        <label htmlFor="service" className="block text-sm font-medium text-charcoal/70 mb-2">Service Needed *</label>
+                        <label htmlFor="service" className="block text-sm font-medium text-charcoal/60 mb-2">Service Needed *</label>
                         <select
                           id="service"
                           name="service"
@@ -182,12 +181,13 @@ export default function Contact() {
                           <option value="fertilization">Fertilization & Weed Control</option>
                           <option value="cleaning">Cleaning Services</option>
                           <option value="sod">Sod Installation</option>
+                          <option value="aeration">Aeration & Overseeding</option>
                           <option value="property-maintenance">Property Maintenance</option>
                           <option value="other">Other</option>
                         </select>
                       </div>
                       <div>
-                        <label htmlFor="message" className="block text-sm font-medium text-charcoal/70 mb-2">Tell Us About Your Project</label>
+                        <label htmlFor="message" className="block text-sm font-medium text-charcoal/60 mb-2">Tell Us About Your Project</label>
                         <textarea
                           id="message"
                           name="message"
@@ -199,7 +199,7 @@ export default function Contact() {
                       <button
                         type="submit"
                         disabled={submitting}
-                        className="w-full bg-lime hover:bg-lime-light text-black font-bold px-8 py-4 rounded-full text-lg transition-all hover:scale-[1.02] shadow-xl shadow-lime/20 flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100"
+                        className="w-full bg-lime hover:bg-lime-light text-black font-bold px-8 py-4 rounded-full text-lg transition-all hover:scale-[1.02] shadow-xl shadow-lime/10 flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100"
                       >
                         {submitting ? (
                           <>
@@ -230,7 +230,7 @@ export default function Contact() {
                         <Phone className="w-5 h-5 text-lime" />
                       </div>
                       <div>
-                        <div className="text-sm text-charcoal/50">Call Us</div>
+                        <div className="text-sm text-charcoal/40">Call Us</div>
                         <div className="text-black font-semibold">(512) 518-1558</div>
                       </div>
                     </a>
@@ -241,7 +241,7 @@ export default function Contact() {
                         <Mail className="w-5 h-5 text-lime" />
                       </div>
                       <div>
-                        <div className="text-sm text-charcoal/50">Email Us</div>
+                        <div className="text-sm text-charcoal/40">Email Us</div>
                         <div className="text-black font-semibold">info@maintainitbandits.com</div>
                       </div>
                     </a>
@@ -251,7 +251,7 @@ export default function Contact() {
                       <MapPin className="w-5 h-5 text-lime" />
                     </div>
                     <div>
-                      <div className="text-sm text-charcoal/50">Service Area</div>
+                      <div className="text-sm text-charcoal/40">Service Area</div>
                       <div className="text-black font-semibold">Austin TX & Surrounding Areas</div>
                     </div>
                   </li>
@@ -260,7 +260,7 @@ export default function Contact() {
                       <Clock className="w-5 h-5 text-lime" />
                     </div>
                     <div>
-                      <div className="text-sm text-charcoal/50">Business Hours</div>
+                      <div className="text-sm text-charcoal/40">Business Hours</div>
                       <div className="text-black font-semibold">Mon–Sat: 7AM – 7PM</div>
                     </div>
                   </li>
@@ -271,7 +271,7 @@ export default function Contact() {
                 <h3 className="font-heading text-xl font-bold text-white mb-3">
                   Same-Week Service
                 </h3>
-                <p className="text-white/60 text-sm mb-6">
+                <p className="text-white/40 text-sm mb-6">
                   Need service fast? We often accommodate new Austin TX customers within the same week!
                 </p>
                 <a
@@ -287,7 +287,7 @@ export default function Contact() {
                 <h3 className="font-heading text-lg font-bold text-black mb-4">Why Austin Chooses Us</h3>
                 <ul className="space-y-3">
                   {['Licensed & Insured', 'Free No-Obligation Estimates', 'Same-Week Availability', '5-Star Customer Reviews', 'Experienced Austin Team', 'Satisfaction Guaranteed'].map((item, i) => (
-                    <li key={i} className="flex items-center gap-3 text-sm text-charcoal/70">
+                    <li key={i} className="flex items-center gap-3 text-sm text-charcoal/60">
                       <CheckCircle className="w-4 h-4 text-lime shrink-0" />
                       {item}
                     </li>

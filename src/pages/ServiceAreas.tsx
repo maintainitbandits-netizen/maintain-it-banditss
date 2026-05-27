@@ -87,7 +87,7 @@ export default function ServiceAreas() {
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 bg-lime/20 border border-lime/30 rounded-full px-4 py-1.5 mb-6">
+            <div className="inline-flex items-center gap-2 bg-lime/10 border border-lime/30 rounded-full px-4 py-1.5 mb-6">
               <MapPin className="w-3 h-3 text-lime" />
               <span className="text-lime text-xs font-semibold tracking-wider uppercase">Service Areas</span>
             </div>
@@ -95,7 +95,7 @@ export default function ServiceAreas() {
               Serving Greater
               <span className="text-lime block">Austin TX</span>
             </h1>
-            <p className="text-white/70 text-lg leading-relaxed">
+            <p className="text-white/50 text-lg leading-relaxed">
               Maintain It Bandits LLC provides professional lawn care, landscaping, cleaning, and home services throughout the Austin metro area. From downtown Austin to the Hill Country, we have got your home covered.
             </p>
           </div>
@@ -109,7 +109,7 @@ export default function ServiceAreas() {
             <h2 className="font-heading text-3xl md:text-4xl text-black font-bold mb-4">
               Our Austin TX Service Areas
             </h2>
-            <p className="text-charcoal/60 text-lg max-w-2xl mx-auto">
+            <p className="text-charcoal/50 text-lg max-w-2xl mx-auto">
               Click on your city to learn more about our services in your area. Do not see your city? Give us a call — we may still serve your neighborhood!
             </p>
           </div>
@@ -127,10 +127,10 @@ export default function ServiceAreas() {
                     {area.city}, TX
                   </h3>
                 </div>
-                <p className="text-charcoal/60 text-sm leading-relaxed mb-4">
+                <p className="text-charcoal/50 text-sm leading-relaxed mb-4">
                   {area.description}
                 </p>
-                <div className="text-charcoal/40 text-xs mb-4">
+                <div className="text-charcoal/30 text-xs mb-4">
                   <span className="font-semibold">ZIP Codes:</span> {area.zipCodes}
                 </div>
                 <Link
@@ -151,20 +151,20 @@ export default function ServiceAreas() {
           <h2 className="font-heading text-2xl md:text-3xl text-black font-bold mb-4">
             Do Not See Your Area?
           </h2>
-          <p className="text-charcoal/60 text-lg mb-8">
+          <p className="text-charcoal/50 text-lg mb-8">
             We are always expanding our Austin TX service area. If you are located near any of the cities listed above, give us a call — we may be able to serve your property!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="bg-lime hover:bg-lime-light text-black font-bold px-8 py-4 rounded-full text-lg transition-all hover:scale-105 shadow-xl shadow-lime/20 flex items-center gap-2 justify-center"
+              className="bg-lime hover:bg-lime-light text-black font-bold px-8 py-4 rounded-full text-lg transition-all hover:scale-105 shadow-xl shadow-lime/10 flex items-center gap-2 justify-center"
             >
               Contact Us
               <ArrowRight className="w-5 h-5" />
             </Link>
             <a
               href="tel:+15125181558"
-              className="flex items-center gap-2 text-black/70 hover:text-black transition-colors text-lg font-medium justify-center"
+              className="flex items-center gap-2 text-charcoal/50 hover:text-black transition-colors text-lg font-medium justify-center"
             >
               <Phone className="w-5 h-5" />
               (512) 518-1558
