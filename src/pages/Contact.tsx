@@ -13,7 +13,7 @@ export default function Contact() {
     setSubmitting(true);
     setError('');
 
-    if (!FORMSPREE_FORM_ID || FORMSPREE_FORM_ID.includes('YOUR_FORMSPREE')) {
+    if (!FORMSPREE_FORM_ID || FORMSPREE_FORM_ID === 'YOUR_FORMSPREE_ID_HERE') {
       setError('Form submission is not configured yet. Please call us at (512) 518-1558 or email info@maintainitbandits.com for your free estimate!');
       setSubmitting(false);
       return;
@@ -21,13 +21,10 @@ export default function Contact() {
 
     try {
       const formData = new FormData(e.currentTarget);
-
       const response = await fetch(`https://formspree.io/f/${FORMSPREE_FORM_ID}`, {
         method: 'POST',
         body: formData,
-        headers: {
-          Accept: 'application/json',
-        },
+        headers: { Accept: 'application/json' },
       });
 
       if (response.ok) {
@@ -84,21 +81,15 @@ export default function Contact() {
                 {submitted ? (
                   <div className="text-center py-12">
                     <CheckCircle className="w-16 h-16 text-lime mx-auto mb-6" />
-                    <h2 className="font-heading text-3xl text-black font-bold mb-4">
-                      Thank You!
-                    </h2>
-                    <p className="text-charcoal/50 text-lg">
+                    <h2 className="font-heading text-3xl text-black font-bold mb-4">Thank You!</h2>
+                    <p className="text-charcoal/60 text-lg">
                       We have received your request and will contact you within 24 hours with your free estimate. Welcome to the Maintain It Bandits LLC family!
                     </p>
                   </div>
                 ) : (
                   <>
-                    <h2 className="font-heading text-2xl md:text-3xl text-black font-bold mb-2">
-                      Request Your Free Estimate
-                    </h2>
-                    <p className="text-charcoal/50 mb-8">
-                      Fill out the form below and we will get back to you within 24 hours with a custom quote for your Austin TX property.
-                    </p>
+                    <h2 className="font-heading text-2xl md:text-3xl text-black font-bold mb-2">Request Your Free Estimate</h2>
+                    <p className="text-charcoal/50 mb-8">Fill out the form below and we will get back to you within 24 hours with a custom quote for your Austin TX property.</p>
 
                     {error && (
                       <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-xl flex items-start gap-3">
@@ -111,70 +102,30 @@ export default function Contact() {
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                           <label htmlFor="firstName" className="block text-sm font-medium text-charcoal/60 mb-2">First Name *</label>
-                          <input
-                            type="text"
-                            id="firstName"
-                            name="firstName"
-                            required
-                            className="w-full px-4 py-3 rounded-xl border border-lime/20 bg-cream/50 focus:border-lime focus:ring-2 focus:ring-lime/20 outline-none transition-all text-charcoal"
-                            placeholder="John"
-                          />
+                          <input type="text" id="firstName" name="firstName" required className="w-full px-4 py-3 rounded-xl border border-lime/20 bg-cream/50 focus:border-lime focus:ring-2 focus:ring-lime/20 outline-none transition-all text-charcoal" placeholder="John" />
                         </div>
                         <div>
                           <label htmlFor="lastName" className="block text-sm font-medium text-charcoal/60 mb-2">Last Name *</label>
-                          <input
-                            type="text"
-                            id="lastName"
-                            name="lastName"
-                            required
-                            className="w-full px-4 py-3 rounded-xl border border-lime/20 bg-cream/50 focus:border-lime focus:ring-2 focus:ring-lime/20 outline-none transition-all text-charcoal"
-                            placeholder="Smith"
-                          />
+                          <input type="text" id="lastName" name="lastName" required className="w-full px-4 py-3 rounded-xl border border-lime/20 bg-cream/50 focus:border-lime focus:ring-2 focus:ring-lime/20 outline-none transition-all text-charcoal" placeholder="Smith" />
                         </div>
                       </div>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                           <label htmlFor="email" className="block text-sm font-medium text-charcoal/60 mb-2">Email *</label>
-                          <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            required
-                            className="w-full px-4 py-3 rounded-xl border border-lime/20 bg-cream/50 focus:border-lime focus:ring-2 focus:ring-lime/20 outline-none transition-all text-charcoal"
-                            placeholder="john@example.com"
-                          />
+                          <input type="email" id="email" name="email" required className="w-full px-4 py-3 rounded-xl border border-lime/20 bg-cream/50 focus:border-lime focus:ring-2 focus:ring-lime/20 outline-none transition-all text-charcoal" placeholder="john@example.com" />
                         </div>
                         <div>
                           <label htmlFor="phone" className="block text-sm font-medium text-charcoal/60 mb-2">Phone *</label>
-                          <input
-                            type="tel"
-                            id="phone"
-                            name="phone"
-                            required
-                            className="w-full px-4 py-3 rounded-xl border border-lime/20 bg-cream/50 focus:border-lime focus:ring-2 focus:ring-lime/20 outline-none transition-all text-charcoal"
-                            placeholder="(512) 555-1234"
-                          />
+                          <input type="tel" id="phone" name="phone" required className="w-full px-4 py-3 rounded-xl border border-lime/20 bg-cream/50 focus:border-lime focus:ring-2 focus:ring-lime/20 outline-none transition-all text-charcoal" placeholder="(512) 555-1234" />
                         </div>
                       </div>
                       <div>
                         <label htmlFor="address" className="block text-sm font-medium text-charcoal/60 mb-2">Property Address *</label>
-                        <input
-                          type="text"
-                          id="address"
-                          name="address"
-                          required
-                          className="w-full px-4 py-3 rounded-xl border border-lime/20 bg-cream/50 focus:border-lime focus:ring-2 focus:ring-lime/20 outline-none transition-all text-charcoal"
-                          placeholder="123 Main St, Austin TX 78701"
-                        />
+                        <input type="text" id="address" name="address" required className="w-full px-4 py-3 rounded-xl border border-lime/20 bg-cream/50 focus:border-lime focus:ring-2 focus:ring-lime/20 outline-none transition-all text-charcoal" placeholder="123 Main St, Austin TX 78701" />
                       </div>
                       <div>
                         <label htmlFor="service" className="block text-sm font-medium text-charcoal/60 mb-2">Service Needed *</label>
-                        <select
-                          id="service"
-                          name="service"
-                          required
-                          className="w-full px-4 py-3 rounded-xl border border-lime/20 bg-cream/50 focus:border-lime focus:ring-2 focus:ring-lime/20 outline-none transition-all text-charcoal"
-                        >
+                        <select id="service" name="service" required className="w-full px-4 py-3 rounded-xl border border-lime/20 bg-cream/50 focus:border-lime focus:ring-2 focus:ring-lime/20 outline-none transition-all text-charcoal">
                           <option value="">Select a service...</option>
                           <option value="lawn-mowing">Lawn Mowing & Maintenance</option>
                           <option value="landscaping">Landscaping & Design</option>
@@ -188,30 +139,10 @@ export default function Contact() {
                       </div>
                       <div>
                         <label htmlFor="message" className="block text-sm font-medium text-charcoal/60 mb-2">Tell Us About Your Project</label>
-                        <textarea
-                          id="message"
-                          name="message"
-                          rows={4}
-                          className="w-full px-4 py-3 rounded-xl border border-lime/20 bg-cream/50 focus:border-lime focus:ring-2 focus:ring-lime/20 outline-none transition-all text-charcoal resize-none"
-                          placeholder="Describe your lawn care, landscaping, or cleaning needs..."
-                        />
+                        <textarea id="message" name="message" rows={4} className="w-full px-4 py-3 rounded-xl border border-lime/20 bg-cream/50 focus:border-lime focus:ring-2 focus:ring-lime/20 outline-none transition-all text-charcoal resize-none" placeholder="Describe your lawn care, landscaping, or cleaning needs..." />
                       </div>
-                      <button
-                        type="submit"
-                        disabled={submitting}
-                        className="w-full bg-lime hover:bg-lime-light text-black font-bold px-8 py-4 rounded-full text-lg transition-all hover:scale-[1.02] shadow-xl shadow-lime/10 flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100"
-                      >
-                        {submitting ? (
-                          <>
-                            <Loader2 className="w-5 h-5 animate-spin" />
-                            Sending...
-                          </>
-                        ) : (
-                          <>
-                            <Send className="w-5 h-5" />
-                            Get My Free Estimate
-                          </>
-                        )}
+                      <button type="submit" disabled={submitting} className="w-full bg-lime hover:bg-lime-light text-black font-bold px-8 py-4 rounded-full text-lg transition-all hover:scale-[1.02] shadow-xl shadow-lime/10 flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100">
+                        {submitting ? (<><Loader2 className="w-5 h-5 animate-spin" />Sending...</>) : (<><Send className="w-5 h-5" />Get My Free Estimate</>)}
                       </button>
                     </form>
                   </>
@@ -226,60 +157,32 @@ export default function Contact() {
                 <ul className="space-y-6">
                   <li>
                     <a href="tel:+15125181558" className="flex items-start gap-4 group">
-                      <div className="w-10 h-10 rounded-full bg-lime/10 flex items-center justify-center shrink-0 group-hover:bg-lime/20 transition-colors">
-                        <Phone className="w-5 h-5 text-lime" />
-                      </div>
-                      <div>
-                        <div className="text-sm text-charcoal/40">Call Us</div>
-                        <div className="text-black font-semibold">(512) 518-1558</div>
-                      </div>
+                      <div className="w-10 h-10 rounded-full bg-lime/10 flex items-center justify-center shrink-0 group-hover:bg-lime/20 transition-colors"><Phone className="w-5 h-5 text-lime" /></div>
+                      <div><div className="text-sm text-charcoal/40">Call Us</div><div className="text-black font-semibold">(512) 518-1558</div></div>
                     </a>
                   </li>
                   <li>
                     <a href="mailto:info@maintainitbandits.com" className="flex items-start gap-4 group">
-                      <div className="w-10 h-10 rounded-full bg-lime/10 flex items-center justify-center shrink-0 group-hover:bg-lime/20 transition-colors">
-                        <Mail className="w-5 h-5 text-lime" />
-                      </div>
-                      <div>
-                        <div className="text-sm text-charcoal/40">Email Us</div>
-                        <div className="text-black font-semibold">info@maintainitbandits.com</div>
-                      </div>
+                      <div className="w-10 h-10 rounded-full bg-lime/10 flex items-center justify-center shrink-0 group-hover:bg-lime/20 transition-colors"><Mail className="w-5 h-5 text-lime" /></div>
+                      <div><div className="text-sm text-charcoal/40">Email Us</div><div className="text-black font-semibold">info@maintainitbandits.com</div></div>
                     </a>
                   </li>
                   <li className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-full bg-lime/10 flex items-center justify-center shrink-0">
-                      <MapPin className="w-5 h-5 text-lime" />
-                    </div>
-                    <div>
-                      <div className="text-sm text-charcoal/40">Service Area</div>
-                      <div className="text-black font-semibold">Austin TX & Surrounding Areas</div>
-                    </div>
+                    <div className="w-10 h-10 rounded-full bg-lime/10 flex items-center justify-center shrink-0"><MapPin className="w-5 h-5 text-lime" /></div>
+                    <div><div className="text-sm text-charcoal/40">Service Area</div><div className="text-black font-semibold">Austin TX & Surrounding Areas</div></div>
                   </li>
                   <li className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-full bg-lime/10 flex items-center justify-center shrink-0">
-                      <Clock className="w-5 h-5 text-lime" />
-                    </div>
-                    <div>
-                      <div className="text-sm text-charcoal/40">Business Hours</div>
-                      <div className="text-black font-semibold">Mon–Sat: 7AM – 7PM</div>
-                    </div>
+                    <div className="w-10 h-10 rounded-full bg-lime/10 flex items-center justify-center shrink-0"><Clock className="w-5 h-5 text-lime" /></div>
+                    <div><div className="text-sm text-charcoal/40">Business Hours</div><div className="text-black font-semibold">Mon–Sat: 7AM – 7PM</div></div>
                   </li>
                 </ul>
               </div>
 
               <div className="bg-black rounded-3xl p-8 text-center">
-                <h3 className="font-heading text-xl font-bold text-white mb-3">
-                  Same-Week Service
-                </h3>
-                <p className="text-white/40 text-sm mb-6">
-                  Need service fast? We often accommodate new Austin TX customers within the same week!
-                </p>
-                <a
-                  href="tel:+15125181558"
-                  className="inline-flex items-center gap-2 bg-lime hover:bg-lime-light text-black font-bold px-6 py-3 rounded-full transition-all hover:scale-105"
-                >
-                  <Phone className="w-4 h-4" />
-                  Call Now
+                <h3 className="font-heading text-xl font-bold text-white mb-3">Same-Week Service</h3>
+                <p className="text-white/40 text-sm mb-6">Need service fast? We often accommodate new Austin TX customers within the same week!</p>
+                <a href="tel:+15125181558" className="inline-flex items-center gap-2 bg-lime hover:bg-lime-light text-black font-bold px-6 py-3 rounded-full transition-all hover:scale-105">
+                  <Phone className="w-4 h-4" />Call Now
                 </a>
               </div>
 
@@ -288,8 +191,7 @@ export default function Contact() {
                 <ul className="space-y-3">
                   {['Licensed & Insured', 'Free No-Obligation Estimates', 'Same-Week Availability', '5-Star Customer Reviews', 'Experienced Austin Team', 'Satisfaction Guaranteed'].map((item, i) => (
                     <li key={i} className="flex items-center gap-3 text-sm text-charcoal/60">
-                      <CheckCircle className="w-4 h-4 text-lime shrink-0" />
-                      {item}
+                      <CheckCircle className="w-4 h-4 text-lime shrink-0" />{item}
                     </li>
                   ))}
                 </ul>
