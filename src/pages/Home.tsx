@@ -73,8 +73,8 @@ export default function Home() {
     <>
       <SEO
         title="Lawn Care, Landscaping & Home Services Austin TX"
-        description="Maintain It Bandits LLC — Austin TX's one-stop shop for lawn care, landscaping, mowing, fertilization, sod installation, cleaning services & property maintenance. Licensed & insured. Serving Austin, Round Rock, Cedar Park, Georgetown & surrounding areas. Call (512) 518-1558 for a free estimate!"
-        keywords="lawn care Austin TX, lawn mowing Austin, landscaping Austin Texas, lawn fertilization Austin, sod installation Austin, cleaning services Austin, move in cleaning Austin, move out cleaning Austin, rodent feces cleanup Austin, property maintenance Austin, lawn service near me, yard maintenance Round Rock, lawn care Cedar Park, landscaping Georgetown TX, home services Austin TX"
+        description="Maintain It Bandits LLC — Austin TX's one-stop shop for lawn care, landscaping, mowing, fertilization, sod installation, cleaning services & property maintenance. Licensed & insured. Free estimates! Serving Austin, Round Rock, Cedar Park, Georgetown and surrounding areas."
+        keywords="lawn care Austin TX, lawn mowing Austin, landscaping Austin Texas, lawn fertilization Austin, sod installation Austin, property maintenance Austin, cleaning services Austin, move in cleaning Austin, move out cleaning Austin, Bermuda grass Austin, St Augustine grass Austin, landscape design Austin, yard maintenance Austin, professional lawn service Austin"
       />
 
       {/* Hero Section */}
@@ -98,7 +98,7 @@ export default function Home() {
               <span className="text-lime block">All Your Home Needs</span>
             </h1>
             <p className="text-white/60 text-lg md:text-xl mb-10 leading-relaxed max-w-2xl">
-              From lawn care and landscaping to deep cleaning services — Maintain It Bandits LLC is your Austin TX one-stop shop for everything your home needs. Licensed, insured, and committed to making your property the best on the block.
+              From lawn care and landscaping to deep cleaning services — Maintain It Bandits LLC is your Austin TX one-stop shop for everything your home needs. Licensed, insured, and committed to excellence. Serving Austin, Round Rock, Cedar Park, Georgetown, and more.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
@@ -180,7 +180,7 @@ export default function Home() {
                 Austin TX's One-Stop Home Service Company
               </h2>
               <p className="text-charcoal/50 text-lg mb-8 leading-relaxed">
-                Maintain It Bandits LLC is not just another lawn service — we are your one-stop shop for everything your Austin TX home needs. Lawn care, landscaping, cleaning, and property maintenance all under one roof. No more juggling multiple contractors.
+                Maintain It Bandits LLC is not just another lawn service — we are your one-stop shop for everything your Austin TX home needs. Lawn care, landscaping, cleaning, and property maintenance, all from trusted local professionals who know Central Texas.
               </p>
               <div className="space-y-4">
                 {[
