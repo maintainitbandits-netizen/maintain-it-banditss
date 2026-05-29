@@ -13,7 +13,7 @@ export default function ServiceCard({ to, image, imageAlt, title, description }:
   return (
     <Link
       to={to}
-      className="group block bg-warm-white rounded-2xl overflow-hidden shadow-lg shadow-black/5 border border-lime/10 hover:shadow-xl hover:shadow-lime/10 transition-all duration-300 hover:-translate-y-1"
+      className="group block bg-warm-white rounded-2xl overflow-hidden shadow-lg shadow-black/5 border border-lime/10 hover:shadow-xl hover:shadow-lime/10 hover:border-lime/20 transition-all duration-300 hover:-translate-y-1"
     >
       <div className="aspect-[16/10] overflow-hidden">
         <img

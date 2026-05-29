@@ -35,13 +35,6 @@ const services = [
     description: 'Fresh sod installation with premium grass varieties suited for Austin TX climate — Bermuda, St. Augustine, and Zoysia.',
   },
   {
-    to: '/aeration-overseeding',
-    image: '/images/aeration.jpg',
-    imageAlt: 'Lawn aeration and overseeding in Austin TX',
-    title: 'Aeration & Overseeding',
-    description: 'Core aeration and overseeding to relieve soil compaction and thicken your Austin TX lawn for a lush, healthy turf.',
-  },
-  {
     to: '/property-maintenance',
     image: '/images/property-maintenance.jpg',
     imageAlt: 'Property maintenance service in Austin Texas',
@@ -80,8 +73,8 @@ export default function Home() {
     <>
       <SEO
         title="Lawn Care, Landscaping & Home Services Austin TX"
-        description="Maintain It Bandits LLC — Austin TX's one-stop shop for lawn care, landscaping, mowing, fertilization, sod installation, cleaning services & property maintenance. Serving Austin, Round Rock, Cedar Park, Georgetown & surrounding areas. Free estimates!"
-        keywords="lawn care Austin TX, lawn mowing Austin, landscaping Austin Texas, lawn fertilization Austin, sod installation Austin, cleaning services Austin, move in cleaning Austin, move out cleaning Austin, property maintenance Austin, lawn service near me, yard maintenance Round Rock, lawn care Cedar Park"
+        description="Maintain It Bandits LLC — Austin TX's one-stop shop for lawn care, landscaping, mowing, fertilization, sod installation, cleaning services & property maintenance. Licensed & insured. Serving Austin, Round Rock, Cedar Park, Georgetown & surrounding areas. Call (512) 518-1558 for a free estimate!"
+        keywords="lawn care Austin TX, lawn mowing Austin, landscaping Austin Texas, lawn fertilization Austin, sod installation Austin, cleaning services Austin, move in cleaning Austin, move out cleaning Austin, rodent feces cleanup Austin, property maintenance Austin, lawn service near me, yard maintenance Round Rock, lawn care Cedar Park, landscaping Georgetown TX, home services Austin TX"
       />
 
       {/* Hero Section */}

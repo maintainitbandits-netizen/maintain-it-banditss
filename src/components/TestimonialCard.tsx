@@ -15,7 +15,7 @@ export default function TestimonialCard({ name, location, text, rating = 5 }: Te
           <Star key={i} className="w-4 h-4 fill-lime text-lime" />
         ))}
       </div>
-      <p className="text-charcoal/60 text-sm leading-relaxed mb-6 italic">"{text}"</p>
+      <p className="text-charcoal/60 text-sm leading-relaxed mb-6 italic">&ldquo;{text}&rdquo;</p>
       <div>
         <div className="font-heading font-bold text-black">{name}</div>
         <div className="text-charcoal/30 text-xs">{location}</div>

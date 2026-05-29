@@ -132,7 +132,6 @@ export default function Contact() {
                           <option value="fertilization">Fertilization & Weed Control</option>
                           <option value="cleaning">Cleaning Services</option>
                           <option value="sod">Sod Installation</option>
-                          <option value="aeration">Aeration & Overseeding</option>
                           <option value="property-maintenance">Property Maintenance</option>
                           <option value="other">Other</option>
                         </select>
